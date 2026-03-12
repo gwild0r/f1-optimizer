@@ -155,7 +155,7 @@ def fantasy_team(
         table.add_column("Season Pts", justify="right", style="green")
         table.add_column("Role", style="yellow")
 
-        for p in ut.get("playerid", []):
+        for p in (ut.get("playerid") or []):
             pid = str(p["id"])
             info = player_lookup.get(pid, {})
             name = info.get("display_name", f"ID:{pid}")
