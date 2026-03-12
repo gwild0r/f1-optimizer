@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "f1-optimizer"
+version = "0.1.0"
+description = "F1 Fantasy team optimizer"
+requires-python = ">=3.10"
+dependencies = [
+    "requests>=2.25",
+    "typer[all]>=0.9",
+    "rich>=13.0",
+    "PuLP>=2.7",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "pytest-cov"]
+
+[project.scripts]
+f1opt = "f1opt.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
