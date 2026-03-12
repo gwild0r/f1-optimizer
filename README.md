@@ -4,6 +4,8 @@ A Python CLI tool that pulls live data from the F1 Fantasy API and uses integer 
 
 ## What it does
 
+![f1opt terminal output](screenshot/f1opt.png)
+
 - Syncs current driver/constructor prices and fantasy points from fantasy.formula1.com
 - Ranks players by points-per-million (PPM) to surface underpriced picks
 - Solves for the mathematically best 5 drivers + 2 constructors + turbo driver within your budget
